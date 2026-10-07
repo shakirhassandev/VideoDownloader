@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://example.com/about.html</loc></url>
+  <url><loc>https://example.com/acceptable-use.html</loc></url>
+  <url><loc>https://example.com/compress-video.html</loc></url>
+  <url><loc>https://example.com/contact.html</loc></url>
+  <url><loc>https://example.com/content-guidelines.html</loc></url>
+  <url><loc>https://example.com/convert-video.html</loc></url>
+  <url><loc>https://example.com/dmca.html</loc></url>
+  <url><loc>https://example.com/download-video.html</loc></url>
+  <url><loc>https://example.com/guide-720p-vs-1080p.html</loc></url>
+  <url><loc>https://example.com/guide-aspect-ratios.html</loc></url>
+  <url><loc>https://example.com/guide-compress-video.html</loc></url>
+  <url><loc>https://example.com/guide-video-formats.html</loc></url>
+  <url><loc>https://example.com/guides.html</loc></url>
+  <url><loc>https://example.com/</loc></url>
+  <url><loc>https://example.com/privacy-policy.html</loc></url>
+  <url><loc>https://example.com/terms.html</loc></url>
+  <url><loc>https://example.com/trim-video.html</loc></url>
+</urlset>

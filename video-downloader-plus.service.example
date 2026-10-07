@@ -1,0 +1,21 @@
+[Unit]
+Description=Video Downloader Plus
+After=network.target
+
+[Service]
+Type=simple
+User=www-data
+Group=www-data
+WorkingDirectory=/var/www/video-downloader-plus
+Environment=APP_ENV=production
+Environment=TRUST_PROXY_HEADERS=true
+ExecStart=/var/www/video-downloader-plus/.venv/bin/python -m uvicorn app.main:app --host 127.0.0.1 --port 8000
+Restart=always
+RestartSec=5
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ReadWritePaths=/var/www/video-downloader-plus/data
+
+[Install]
+WantedBy=multi-user.target

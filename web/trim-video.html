@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Video Trimmer | Video Downloader Plus</title>
+<meta name="description" content="Choose a start and end time and create a trimmed copy of your video in the browser.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://example.com/trim-video.html">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/styles.css">
+<script type="module" src="assets/js/video-tools.js"></script>
+</head>
+<body data-tool="trim">
+
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="index.html" aria-label="Video Downloader Plus home">
+      <span class="brand-mark"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8.5 5.2 17 10a2.3 2.3 0 0 1 0 4l-8.5 4.8A2.3 2.3 0 0 1 5 16.8V7.2a2.3 2.3 0 0 1 3.5-2Z"/></svg></span>
+      <span class="brand-name">Video Downloader <b>Plus</b></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <div class="nav-dropdown">
+        <button type="button" aria-expanded="false">Tools ▾</button>
+        <div class="dropdown-menu">
+          <a href="download-video.html">Download video</a>
+          <a href="compress-video.html">Compress video</a>
+          <a href="convert-video.html">Convert video</a>
+          <a href="trim-video.html">Trim video</a>
+        </div>
+      </div>
+      <a href="index.html#how">How it works</a>
+      <a href="guides.html">Guides</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <a class="btn btn-primary" href="download-video.html">Start downloading →</a>
+      <button class="icon-btn mobile-toggle" type="button" aria-expanded="false" aria-label="Open navigation">☰</button>
+    </div>
+  </div>
+</header>
+<main id="main">
+
+<section class="page-hero">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Video Downloader Plus</span>
+      <h2>Video Trimmer</h2>
+      <p>Choose a start and end time and create a trimmed copy of your video in the browser.</p>
+    </div>
+    
+<div class="tool-workspace">
+  <div class="tool-tabs"><a class="tool-tab" href="download-video.html">Download</a><a class="tool-tab" href="compress-video.html">Compress</a><a class="tool-tab" href="convert-video.html">Convert</a><a class="tool-tab active" href="trim-video.html">Trim</a></div>
+  <div class="upload-zone" id="uploadZone" role="button" tabindex="0">
+    <input id="fileInput" type="file" accept="video/*">
+    <span class="upload-zone-icon">✂</span><h3>Choose a video to trim</h3><p>Or drag and drop a file. Use HH:MM:SS timestamps for the output range.</p>
+  </div>
+  <div class="file-summary" id="fileSummary"><div class="file-summary-info"><span class="file-summary-icon">FILE</span><div><b id="fileName"></b><small id="fileSize"></small></div></div></div>
+  <div class="video-preview" id="videoPreview"><video id="previewVideo" controls></video></div>
+  <div class="time-grid">
+    <div class="setting"><label for="startTime">Start time</label><input id="startTime" value="00:00:00" inputmode="numeric"></div>
+    <div class="setting"><label for="endTime">End time</label><input id="endTime" placeholder="00:00:30" inputmode="numeric"></div>
+  </div>
+  <div style="margin-top:14px"><button class="btn btn-primary" id="processBtn" type="button">Trim video</button></div>
+  <div class="progress-wrap" id="progressWrap"><div class="progress-bar"><span id="progressBar"></span></div><div class="progress-label"><span>Processing locally</span><span id="progressText">0%</span></div></div>
+  <p class="status-msg" id="toolStatus">Choose a file to begin.</p>
+  <div class="result-panel" id="resultPanel"><h3>Trimmed file ready</h3><p>Your output was generated in the browser.</p><a class="btn btn-primary" id="resultLink" href="#">Download trimmed video</a></div>
+</div>
+
+  </div>
+</section>
+<section class="section soft">
+  <div class="container">
+    <div class="section-head center"><span class="eyebrow">How this tool works</span><h2>Built for a simple browser workflow</h2><p>The core editing tools run locally in the browser where supported. Very large files can be slow on low-powered devices.</p></div>
+    <div class="steps">
+      <article class="step-card"><span class="step-no">1</span><span class="step-icon">▣</span><h3>Add media</h3><p>Select a local file or paste a permitted direct media URL.</p></article>
+      <article class="step-card"><span class="step-no">2</span><span class="step-icon">⚙</span><h3>Choose settings</h3><p>Pick the format, compression preset or trim range.</p></article>
+      <article class="step-card"><span class="step-no">3</span><span class="step-icon">⇩</span><h3>Save output</h3><p>Download the resulting file when processing finishes.</p></article>
+    </div>
+    <div class="ad-slot"><div>Advertisement<b>Reserved ad area, away from processing buttons.</b></div></div>
+  </div>
+</section>
+<div class="sr-only" aria-live="polite" id="toolLive"></div>
+
+</main>
+
+<footer>
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a class="brand" href="index.html">
+        <span class="brand-mark"><svg viewBox="0 0 24 24"><path d="M8.5 5.2 17 10a2.3 2.3 0 0 1 0 4l-8.5 4.8A2.3 2.3 0 0 1 5 16.8V7.2a2.3 2.3 0 0 1 3.5-2Z"/></svg></span>
+        <span class="brand-name">Video Downloader <b>Plus</b></span>
+      </a>
+      <p>A simple browser-first set of tools to work with permitted video files. Compress, convert and trim locally on supported browsers.</p>
+    </div>
+    <div><h4>Tools</h4><a href="download-video.html">Download video</a><a href="compress-video.html">Compress video</a><a href="convert-video.html">Convert video</a><a href="trim-video.html">Trim video</a></div>
+    <div><h4>Resources</h4><a href="guides.html">Guides</a><a href="index.html#how">How it works</a><a href="index.html#faq">FAQ</a><a href="acceptable-use.html">Supported use</a></div>
+    <div><h4>Company</h4><a href="about.html">About</a><a href="contact.html">Contact</a><a href="content-guidelines.html">Editorial policy</a></div>
+    <div><h4>Legal</h4><a href="terms.html">Terms</a><a href="privacy-policy.html">Privacy</a><a href="dmca.html">Copyright / DMCA</a><a href="acceptable-use.html">Acceptable use</a></div>
+  </div>
+  <div class="container footer-bottom"><span>© 2026 Video Downloader Plus.</span><span>Use only media you own or are authorized to save.</span></div>
+</footer>
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>

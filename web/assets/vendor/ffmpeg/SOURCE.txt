@@ -1,0 +1,5 @@
+@ffmpeg/ffmpeg 0.12.10 (MIT), dist/esm, copied unmodified from
+https://cdn.jsdelivr.net/npm/@ffmpeg/ffmpeg@0.12.10/dist/esm/
+
+Served from this site because browsers refuse to start the module worker
+(worker.js) from a cross-origin CDN URL.
